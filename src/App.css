@@ -6,8 +6,8 @@ body{
   justify-content: center;
   align-items: center;
 
-  font-family: 'Yeon Sung', cursive;
   font-family: 'Jua', sans-serif;
+  font-family: 'Yeon Sung', cursive;
   min-height: 100vh;
   margin: 0px;
 }
@@ -82,7 +82,7 @@ header > div {
 
 .head--text{
   width: 50%;
-  font-size: 25px;
+  font-size: 20px;
   justify-content: center;
 }
 
