@@ -12,7 +12,7 @@ const DiaryItem = ({date, emotion, id, content}) =>{
   }
 
   const goEdit = () => {
-    navigate(`/edit`);
+    navigate(`/edit/${id}`);
   }
   
   return (
