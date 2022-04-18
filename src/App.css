@@ -279,27 +279,27 @@ header > div {
   background-color: #ececec;
 }
 
-.EmotionItem-on-1{
+.EmotionItem-on--1{
   background-color: #FD565F;
   color : white;  
 }
 
-.EmotionItem-on-2{
+.EmotionItem-on--2{
   background-color: #FD8446;
   color : white; 
 }
 
-.EmotionItem-on-3{
+.EmotionItem-on--3{
   background-color: #FDCE17;
   color : white; 
 }
 
-.EmotionItem-on-4{
+.EmotionItem-on--4{
   background-color: #9DD772;
   color : white; 
 }
 
-.EmotionItem-on-5{
+.EmotionItem-on--5{
   background-color: #64C964;
   color : white; 
 }
@@ -316,6 +316,8 @@ header > div {
   align-items: center;
 
   width: 100%;
+
+  margin-bottom: 80px;
 }
 
 .DiaryPage h4{
@@ -360,3 +362,20 @@ header > div {
 .DiaryPage .diary-img-wrapper--5{
   background-color: #64C964;
 }
+
+.DiaryPage .diary-content-wrapper{
+  background-color: #ececec;
+  width: 100%;
+  min-height: 200px;
+  border-radius: 10px;
+
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.DiaryPage .diary-content-wrapper p{
+  padding: 0px 20px;
+  font-size: 20px;
+  line-height: 2;
+}
+
