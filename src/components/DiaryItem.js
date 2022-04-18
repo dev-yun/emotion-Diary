@@ -1,10 +1,13 @@
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { DiaryDispatchContext } from "../App";
 import MyButton from "./MyButton";
 
 const DiaryItem = ({date, emotion, id, content}) =>{
   
   const navigate = useNavigate();
 
+  const {onRemove} = useContext(DiaryDispatchContext)
   const strDate = new Date(parseInt(date)).toLocaleDateString();
 
   const goDetail = () => {
@@ -13,6 +16,12 @@ const DiaryItem = ({date, emotion, id, content}) =>{
 
   const goEdit = () => {
     navigate(`/edit/${id}`);
+  }
+
+  const handleRemove = () => {
+    if(window.confirm("정말 삭제하시겠습니까?")){
+      onRemove(id);
+    }
   }
   
   return (
@@ -26,6 +35,7 @@ const DiaryItem = ({date, emotion, id, content}) =>{
       </div>
       <div className="btn-wrapper">
         <MyButton text={"수정하기"} onClick={goEdit} />
+        <MyButton text={'삭제하기'} type={"negative"} onClick={handleRemove} />
       </div>
     </div>
   )
