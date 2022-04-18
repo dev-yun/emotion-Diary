@@ -18,6 +18,7 @@ const Edit = () => {
       if(targetDiary){
         setOriginData(targetDiary);
       }else{
+        alert("존재하지 않는 일기입니다.")
         navigate('/', {replace : true});
       }
     };
@@ -25,7 +26,7 @@ const Edit = () => {
 
   return (
     <div>
-      {originData && <DiaryEditor isEdit={true} originData={originData}/>}
+      {originData && <DiaryEditor isEdit={true} originData={originData} />}
     </div>
   )
 }
