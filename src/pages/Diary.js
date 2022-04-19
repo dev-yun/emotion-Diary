@@ -16,6 +16,10 @@ const Diary = () => {
   // const [currentDate, setCurrentDate] = useState();
   // const headText = `${currentDate.getFullYear()}년 ${currentDate.getMonth() + 1}월`;
 
+  useEffect(()=>{
+    const titleElement = document.getElementsByTagName('title')[0];
+    titleElement.innerHTML = `일기장 - ${id}번 일기`;
+  },[])
 
   useEffect(() => {
     if(diaryList.length >= 1){
@@ -38,7 +42,6 @@ const Diary = () => {
     const currentEmotionData = emotionList.find(
       (it) => parseInt(it.emotion_id) === parseInt(data.emotion)
     );
-    console.log(currentEmotionData);
 
     return (
       <div className="DiaryPage">
