@@ -32,7 +32,9 @@ const Home = () => {
       setData(
         diaryList.filter((it) => firstDay <= it.date && it.date <= lastDay)
       );
-    }  
+    }else{
+      setData([])
+    }
   }, [diaryList, currentDate]);
 
 
