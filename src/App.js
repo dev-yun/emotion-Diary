@@ -41,12 +41,15 @@ export const DiaryDispatchContext = React.createContext();
 const App = () => {
 
   useEffect(() => {
-    const localData = localStorage.getItem('diary');
-    if(localData.length > 2){
-      const diaryList = JSON.parse(localData).sort((a,b) => parseInt(b.id) - parseInt(a.id));
-      dataId.current = parseInt(diaryList[0].id) + 1
+    const localData = JSON.parse((localStorage.getItem('diary')));
 
-      dispatch({type : "INIT", data:diaryList});
+    if(localData){
+      const diaryList = localData.sort((a,b) => parseInt(b.id) - parseInt(a.id));
+
+      if(diaryList.length >= 1){
+        dataId.current = parseInt(diaryList[0].id) + 1
+        dispatch({type : "INIT", data:diaryList});
+      }
     }
   },[])
 

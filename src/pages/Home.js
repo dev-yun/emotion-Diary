@@ -9,12 +9,15 @@ import DiaryList from "../components/DiaryList";
 const Home = () => {
 
   const diaryList = useContext(DiaryStateContext);
-
   const [data, setData] = useState([]);
-
   const [currentDate, setCurrentDate] = useState(new Date());
   const headText = `${currentDate.getFullYear()}년 ${currentDate.getMonth() + 1}월`;
 
+
+  useEffect(()=>{
+    const titleElement = document.getElementsByTagName('title')[0];
+    titleElement.innerHTML = `감정 일기장`;
+  },[])
 
   useEffect(()=>{
     if (diaryList.length >= 1) {
