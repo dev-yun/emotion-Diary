@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { DiaryDispatchContext } from "../App";
 import MyButton from "./MyButton";
@@ -41,4 +41,4 @@ const DiaryItem = ({date, emotion, id, content}) =>{
   )
 }
 
-export default DiaryItem;
+export default React.memo(DiaryItem);
