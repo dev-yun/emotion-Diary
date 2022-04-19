@@ -194,8 +194,14 @@ header > div {
 .DiaryItem .btn-wrapper{
   display: flex;
   align-items: center;
+  flex-direction: column;
 
-  min-width: 70px;
+  min-width: 50px;
+}
+
+.DiaryItem .btn-wrapper button{
+  font-size: 15px;
+  margin-bottom: 5px;
 }
 
 /* Diary Editor */
